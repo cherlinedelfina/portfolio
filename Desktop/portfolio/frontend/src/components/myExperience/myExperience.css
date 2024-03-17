@@ -1,0 +1,148 @@
+:root {
+    --dark-background-color: hsl(150, 7%, 5%); /* Dark mode background color */
+    --dark-secondary-color: #091C17; /* Dark mode secondary background color */
+    --dark-text-color: #091C17; /* Dark mode text color */
+    
+    --light-background-color: #0D0F0E; /* Light mode background color */
+    --light-secondary-color: #091C17; /* Light mode secondary background color */
+    --light-text-color: #5AE7B4; /* Light mode text color */
+  }
+  
+  .light-mode {
+    --background-color: var(--light-background-color);
+    --secondary-color: var(--light-secondary-color);
+    --text-color: var(--light-text-color);
+  }
+  
+  
+  .slideC {
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    width: 362px;
+    height: 420px;
+    margin: 0 auto;
+  }
+  
+  .slide {
+    width: 362px;
+    height: 420px;
+    transition: transform 500ms ease 0s, opacity 500ms ease 0s,
+      visibility 500ms ease 0s;
+    position: absolute;
+    top: 0;
+    border-radius: 12px;
+    align-items: center;
+  }
+
+  .slide img {
+    border-radius: 12px; /* Rounded corners for the image */
+    
+  }
+  
+  /* 3D reflection effect */
+  .reflection {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: -60px;
+    border-radius: 12px;
+    transition: transform 500ms ease 0s, opacity 500ms ease 0s,
+      visibility 500ms ease 0s;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #0D0F0E);
+    left: 0;
+  }
+  
+  
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .sliderContent {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 30px;
+    align-items: flex-start;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .sliderContent h2 {
+    margin: 16px 0;
+  }
+  .sliderContent p {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  
+  /* normal css  */
+  
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    /* Remove overflow hidden */
+    background: transparent;
+    
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .btns {
+    padding-top: 100px;
+  }
+  
+  .btns .btn {
+    cursor: pointer;
+  }
+  
+  .btns .btn:last-child {
+    margin-left: 40px;
+  }
+  
+  .myExperience-container {
+    position: relative; /* Set the container position to relative */
+    z-index: 0; /* Ensure it stays below the slider */
+    background: linear-gradient(to bottom, var(--secondary-color) 30%, var(--background-color) 70%);
+    height:100%;
+    padding-bottom: 180px;
+    padding-top: 1px;
+  }
+  
+ 
+  .large-text1 {
+    font-family: 'Amiko', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: #E1E1E1;
+    margin-bottom: 120px 0;
+    text-align: center;
+    padding-top: 0px;
+  }
+
+  .slideC.scroll-active .slide {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 500ms ease, transform 500ms ease;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

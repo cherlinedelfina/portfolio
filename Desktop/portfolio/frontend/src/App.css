@@ -1,0 +1,85 @@
+.App {
+  position: relative;
+  
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: transparent;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.content {
+  margin-top: 60px; 
+}
+
+.horizontal-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 1000;
+  background-color: #0B0B0A;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.horizontal-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.horizontal-nav li {
+  margin-right: 60px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.horizontal-nav li:last-child {
+  margin-right: 90px;
+}
+
+
+.horizontal-nav a {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 15px;
+  color: #5AE7B4;
+  text-decoration: none;
+}
+
+.horizontal-nav a:hover {
+  text-decoration: underline;
+}
+
+.light-mode-nav {
+  background-color: #0B0B0A; /* Light mode background color */
+  color: #000; /* Light mode text color */
+}
+
+.dark-mode-nav {
+  background-color: #f0f0f0; /* Dark mode background color */
+  color: #000; /* Dark mode text color */
+}
