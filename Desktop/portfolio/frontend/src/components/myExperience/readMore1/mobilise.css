@@ -1,0 +1,400 @@
+:root {
+  --dark-background-color: hsl(150, 7%, 5%); /* Dark mode background color */
+  --dark-secondary-color: #091C17; /* Dark mode secondary background color */
+  --dark-text-color: #091C17; /* Dark mode text color */
+  
+  --light-background-color: #0D0F0E; /* Light mode background color */
+  --light-secondary-color: #091C17; /* Light mode secondary background color */
+  --light-text-color: #5AE7B4; /* Light mode text color */
+}
+
+
+
+.light-mode {
+  --background-color: var(--light-background-color);
+  --secondary-color: var(--light-secondary-color);
+  --text-color: var(--light-text-color);
+}
+
+.light-mode-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.dark-mode-button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--background-color) 70%, var(--secondary-color) 100%);
+}
+
+.dark-mode .container {
+  background: #fff; /* Light color for dark mode */
+}
+
+.light-mode .container {
+  background: linear-gradient(to bottom, var(--background-color) 70%, var(--secondary-color) 100%);
+}
+
+.left-column1 {
+  animation: slideInLeft 1s ease forwards;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 80px;
+  
+  
+}
+
+.right-column1 {
+  animation: slideInRight 1s ease forwards;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+  overflow: hidden;
+  
+}
+
+.image-container2 {
+  position: relative;
+  width: 640px;
+  height: 900px;
+  left:20px;
+  display: flex;
+  overflow: hidden;
+
+}
+
+.link-container {
+  position: fixed;
+  top: 460px;
+  left: 140px;
+  font-size: 13px;
+  z-index: 9999;
+}
+
+.link {
+  color: #E1E1E1;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+
+.image1.with-shadow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Updated shadow */
+}
+
+.top-center-text {
+  text-align: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.greeting1 {
+  text-align: left;
+}
+
+.large1-text1 {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: #5AE7B4;
+  margin: 0px;
+
+}
+
+.small1-text1 {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 18px;
+  margin-top: 7px;
+  margin-bottom: 30px;
+
+}
+
+
+
+.small1-text2 {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 19px;
+  color: #AFAFAF;
+}
+
+.dark-mode .small1-text2 {
+  color: #353535;
+}
+
+.light-mode .small1-text2 {
+  color: #AFAFAF;
+}
+
+.dark-mode .small1-text3 {
+  color: #353535;
+}
+
+.light-mode .small1-text3 {
+  color: #AFAFAF;
+}
+
+.dark-mode .large1-text1 {
+  color: #16ae76;
+}
+
+.light-mode .large1-text1 {
+  color: #5AE7B4;
+}
+
+
+.light-mode .image1.with-shadow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Updated shadow */
+}
+
+.dark-mode .image1.with-shadow {
+  box-shadow: 0 0 20px rgba(7, 7, 7, 0.5); /* Updated shadow */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.shapes-image2 {
+  position: relative;
+  width: 500px;
+  height: 700px;
+  top:164px;
+  left:60px;
+
+
+  opacity: 0.2;
+  animation-delay: 1s;
+
+}
+
+
+
+
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 10px #000000;
+  }
+  50% {
+    box-shadow: 0 0 20px #000000;
+  }
+  100% {
+    box-shadow: 0 0 10px #000000;
+  }
+}
+
+.image1 {
+  position: relative;
+  width: 380px;
+  bottom: 435px;
+
+  left: 120px;
+  height: 300px;
+
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); /* Initial shadow */
+  transition: box-shadow 0.5s ease; /* Transition for box shadow */
+  animation: slideInRight 1s ease forwards; /* Animation for entering */
+}
+
+
+
+/* Your existing CSS */
+
+.container.scroll-active .left-column {
+  animation: slideOutLeft 2s ease forwards;
+}
+
+.container.scroll-active .right-column {
+  animation: slideOutRight 2s ease forwards;
+}
+
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.container1.scroll-active .left-column {
+  animation: slideOutLeft 2s ease forwards;
+}
+
+.container1.scroll-active .right-column {
+  animation: slideOutRight 2s ease forwards;
+}
+
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+
+@keyframes shadowTransition {
+  0% {
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0);
+  }
+  100% {
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.image-grid {
+  z-index: -10;
+  background: linear-gradient(to bottom, var(--secondary-color) 70%, var(--secondary-color) 100%);
+  display: flex;
+  justify-content: space-between;
+  padding-left:65px;
+  padding-right:500px;
+
+}
+
+
+
+
+.image-item img {
+  z-index: 1;
+  width: 250px;
+  height: 180px;
+  display: block;  
+  border-radius: 25px;
+  
+}
+
+.image-item::before {
+  content: ''; /* Create a pseudo-element */
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  margin-top: 110px;
+  margin-left:125px;
+
+  width: 280px;
+  height: 260px;
+  background-color: #8e8e8e;
+  z-index: -1; /* Place the square behind the image */
+  border-radius: 25px;
+}
+
+.image-item {
+  width: 350px;
+  height: 300px;
+  margin-left: 60px;
+  opacity: 0; 
+  animation: fadeIn 1.5s ease-in-out forwards;
+  z-index: 1;
+  
+  
+}
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 */
+  }
+}
+
+/* Apply delay to each image item */
+.image-item:nth-child(1) {
+  animation-delay: 0.2s; /* Delay for the first image */
+}
+
+.image-item:nth-child(2) {
+  animation-delay: 0.4s; /* Delay for the second image */
+}
+
+.image-item:nth-child(3) {
+  animation-delay: 0.6s; /* Delay for the third image */
+}
+
+.image-item:nth-child(4) {
+  animation-delay: 0.8s; /* Delay for the fourth image */
+}
+

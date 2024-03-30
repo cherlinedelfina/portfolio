@@ -83,3 +83,21 @@
   background-color: #f0f0f0; /* Dark mode background color */
   color: #000; /* Dark mode text color */
 }
+
+.dark-mode .custom-link{
+  color: #16ae76;
+  font-weight: bold;
+}
+
+.light-mode .custom-link {
+  color: #5AE7B4;
+}
+
+/* In your CSS file */
+.custom-link {
+}
+
+.custom-link:hover {
+  text-decoration: underline; 
+  
+}

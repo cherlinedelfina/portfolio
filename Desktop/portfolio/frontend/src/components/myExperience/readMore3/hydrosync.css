@@ -1,0 +1,371 @@
+:root {
+  --dark-background-color: hsl(150, 7%, 5%); /* Dark mode background color */
+  --dark-secondary-color: #091C17; /* Dark mode secondary background color */
+  --dark-text-color: #091C17; /* Dark mode text color */
+  
+  --light-background-color: #0D0F0E; /* Light mode background color */
+  --light-secondary-color: #091C17; /* Light mode secondary background color */
+  --light-text-color: #5AE7B4; /* Light mode text color */
+}
+
+.combined-container1 {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--background-color) 70%, var(--secondary-color) 100%);
+}
+
+
+
+.light-mode {
+  --background-color: var(--light-background-color);
+  --secondary-color: var(--light-secondary-color);
+  --text-color: var(--light-text-color);
+}
+
+.light-mode-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.dark-mode-button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+.container100 {
+  display: flex;
+  height: 840px;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--background-color) 70%, var(--secondary-color) 100%);
+}
+
+
+.left-column {
+  animation: slideInLeft 1s ease forwards;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 80px;
+  
+  
+}
+
+.right-column {
+  animation: slideInRight 1s ease forwards;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+  overflow: hidden;
+  
+}
+
+
+
+
+.image-container100 {
+  position: relative;
+  width: 640px;
+  height: 1070px;
+  left:20px;
+  background-color: transparent;
+  
+  
+
+}
+
+
+
+
+.image.with-shadow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Updated shadow */
+}
+
+.top-center-text {
+  text-align: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.greeting {
+  text-align: left;
+}
+
+.small-text100 {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 19px;
+  color: #5AE7B4;
+  margin-top: 0px;
+  margin-bottom: 50px;
+
+}
+
+.small-text300 {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size:19px;
+
+  z-index: 1;
+  color: #AFAFAF;
+  padding-bottom: 210px;
+
+}
+
+.large-text100 {
+  font-family: 'Amiko', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: #5AE7B4;
+  margin-bottom: 15px;
+  padding-top: 70px;
+  
+}
+
+.small-text200 {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 19px;
+  color: #AFAFAF;
+  
+
+}
+
+.shapes-image1 {
+  position: relative;
+  width: 500px;
+  height: 700px;
+  top:164px;
+  left:60px;
+
+
+  opacity: 0.2;
+  animation-delay: 1s;
+
+}
+
+
+
+
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 10px #000000;
+  }
+  50% {
+    box-shadow: 0 0 20px #000000;
+  }
+  100% {
+    box-shadow: 0 0 10px #000000;
+  }
+}
+
+.dark-mode .small-text100{
+  color: #16ae76;
+}
+
+.light-mode .small-text100 {
+  color: #5AE7B4;
+}
+
+
+.image100 {
+  position: relative;
+  width: 380px;
+  bottom: 435px;
+  
+  
+
+  left: 120px;
+  height: 300px;
+
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); /* Initial shadow */
+  transition: box-shadow 0.5s ease; /* Transition for box shadow */
+  animation: slideInRight 1s ease forwards; /* Animation for entering */
+}
+
+/* rednose.css */
+.button-container {
+margin-top: 20px; /* Adjust margin as needed */
+margin-bottom: 500px;
+}
+
+.button-container button {
+
+background-color: #d1d1d1; /* Blue color, adjust as needed */
+color: white;
+
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.button-container button:hover {
+background-color: #d1d1d1; /* Darker shade of blue on hover, adjust as needed */
+}
+
+
+.switch-button {
+  position: fixed;
+  top: 650px; /* Adjust top positioning as needed */
+right: 225px; /* Adjust right positioning as needed */
+  background-color: #d1d1d1; /* Change to desired button color */
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1;
+  margin-bottom: 100px; /* Add margin-top for spacing */
+}
+
+
+
+
+
+/* Your existing CSS */
+
+.container.scroll-active .left-column {
+  animation: slideOutLeft 2s ease forwards;
+}
+
+.container.scroll-active .right-column {
+  animation: slideOutRight 2s ease forwards;
+}
+
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.container1.scroll-active .left-column {
+  animation: slideOutLeft 2s ease forwards;
+}
+
+.container1.scroll-active .right-column {
+  animation: slideOutRight 2s ease forwards;
+}
+
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+
+@keyframes shadowTransition {
+  0% {
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0);
+  }
+  100% {
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.image-grid {
+  z-index: -10;
+  background: linear-gradient(to bottom, var(--secondary-color) 70%, var(--secondary-color) 100%);
+  display: flex;
+  justify-content: space-between;
+  padding-left:65px;
+  padding-right:500px;
+
+}
+
+.image-item {
+  width: 350px;
+  height: 300px;
+  margin-left: 60px;
+
+  z-index: 1;
+}
+
+
+.image-item img {
+  z-index: 1;
+  width: 250px;
+  height: 180px;
+  display: block;  
+  border-radius: 25px;
+}
+
+.image-item::before {
+  content: ''; /* Create a pseudo-element */
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  margin-top: 120px;
+  margin-left:125px;
+
+  width: 280px;
+  height: 280px;
+  background-color: #8e8e8e;
+  z-index: -1; /* Place the square behind the image */
+  border-radius: 25px;
+}

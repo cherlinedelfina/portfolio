@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './myExperience.css';
-import TestPage from '../readMore/mobilise'; 
 import Data from './data';
 
+
 const Slider = (props) => {
-  const [activeSlide, setActiveSlide] = useState(props.activeSlide);
+  const [activeSlide, setActiveSlide] = useState(2);
 
   const goToSlide = (index) => {
     setActiveSlide(index);
@@ -69,7 +69,7 @@ const Slider = (props) => {
           }}
           onClick={() => goToSlide(i)}
         >
-          <SliderContent {...item} /> {/* Pass the entire item object */}
+          <SliderContent {...item} /> {/* Include SliderContent here */}
         </div>
       ))}
     </div>
@@ -82,18 +82,18 @@ const SliderContent = (props) => {
       {props.icon}
       <h2>{props.title}</h2>
       <p>{props.desc}</p>
+      <div className="read-more">
+        <Link to={props.link} className="read-more-link">Read More</Link> {/* Use the link prop */}
+      </div>
+
       <div className="reflection" style={{ 
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), #0D0F0E)`,
         backgroundColor: props.bgColor
       }}></div>
-      {props.id === 1 ? (
-        <Link to={TestPage}>Read More</Link>
-      ) : (
-        <Link to={props.link}>Read More</Link>
-      )}
     </div>
   );
 };
 
 
 export default Slider;
+
