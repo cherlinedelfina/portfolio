@@ -1,0 +1,256 @@
+.block-list {
+    margin: 20px auto; /* Auto margin to center */
+    width: 70%; /* Set desired width */
+  }
+  
+  .block {
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    opacity: 0; /* Initially hide the blocks */
+  }
+
+  .block:nth-child(1) {
+    animation: fadeInLeft 0.5s ease forwards;
+    animation-delay: 0.1s;
+  }
+  
+  .block:nth-child(2) {
+    animation: fadeInLeft 0.5s ease forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .block:nth-child(3) {
+    animation: fadeInLeft 0.5s ease forwards;
+    animation-delay: 0.3s;
+  }
+
+  .light-mode .light-text {
+    color: black;
+  }
+
+  .dark-mode .myPortfolio-container {
+    background: #eaeaea; /* Light color for dark mode */
+  }
+
+  .light-mode .myPortfolio-container {
+    background: linear-gradient(to bottom, var(--background-color) 70%, var(--secondary-color) 100%); /* Dark color for light mode */; /* Light color for dark mode */
+  }
+  
+
+  .block:nth-child(4) {
+    animation: fadeInLeft 0.5s ease forwards;
+    animation-delay: 0.4s;
+  }
+  
+  .block:nth-child(5) {
+    animation: fadeInLeft 0.5s ease forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  
+  .header {
+    background-color: #2DAC7E;
+    padding-left: 25px;
+    padding-right: 15px;
+    padding-top: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .square-row {
+    display: flex;
+    margin-bottom: 8px;
+  }
+  .expand-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-right: 10px;
+    font-size: 30px;
+    color: white;
+  }
+
+
+  .expanded-description {
+    padding-top: 30px;
+    padding-left: 25px;
+    align-items: center;
+    padding-right: 75px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(44, 101, 80, 0.3);
+    display: flex;
+    flex-direction: column; /* Change flex direction to column */
+    align-items: flex-start; /* Align items to start of column */
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr 100px; /* Divide the container into two columns */
+    grid-gap: 20px; /* Add some space between the columns */
+    
+  }
+
+
+  .dark-mode .description-text {color: rgb(28, 28, 28)}
+
+  .light-mode .description-text {
+    color: white; /* Dark color for light mode */
+  }
+
+
+  
+  .description-text {
+    font-size: 18px;
+    flex: 1;
+    line-height: 30px;
+    align-items: flex-start;
+    align-items: center;
+    
+  }
+  
+
+
+  .large-image {
+    width: 150px;
+  }
+
+  .medium-image {
+    width: 300px;
+    margin-right:200px;
+  }
+  
+  
+.square-item {
+    display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  }
+  
+  .small-image {
+    width: 150px;
+  }
+
+  .award-container {
+    padding-top: 20px; /* Add space between description and award */
+    clear: both; /* Ensure it clears any floated elements */
+  }
+  
+  
+  .additional-info {
+    display: flex;
+    flex-direction: row; /* Make the squares appear horizontally */
+    justify-content: flex-start; /* Align squares at the start */
+    margin-top: 1px;
+    
+  }
+
+  .squares-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .squares-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px; /* Adjust spacing between rows */
+  }
+  
+  
+  
+  .myPortfolio-container {
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    padding-top: 1px;
+  }
+
+  .container1000 {
+    position: relative;
+    z-index: 0;
+    height: 660px;
+    padding-top: 1px;
+  }
+  
+  .bold {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .bold-title {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .large-text3 {
+    font-family: 'Amiko', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  
+  .large-text2 {
+    font-family: 'Amiko', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    padding-top: 10px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .dark-mode .large-text3 {
+    color: #1c1c1c; /* Light color for dark mode */
+  }
+  
+  /* Light Mode */
+  .light-mode .large-text3{
+    color: #E1E1E1; /* Dark color for light mode */
+  }
+
+
+  .dark-mode .large-text2 {
+    color: #1c1c1c; /* Light color for dark mode */
+  }
+  
+  /* Light Mode */
+  .light-mode .large-text2{
+    color: #E1E1E1; /* Dark color for light mode */
+  }
+
+
+
+  
+  .info-square {
+    background-color: #767676; /* Adjust the color as needed */
+    opacity: 0.7;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-right: 8px; /* Adjust spacing between squares */
+    margin-bottom: 8px; /* Adjust spacing between squares and rows */
+    font-size: 20px;
+    padding: 10px 20px; /* Adjust padding for squares */
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+
+
+  .description-container {
+    display: flex;
+    align-items: center; /* Vertical centering */
+  }

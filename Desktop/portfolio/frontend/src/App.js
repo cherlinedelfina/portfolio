@@ -1,31 +1,16 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-import About from "./components/aboutMe/aboutMe";
-import Projects from "./components/myPortfolio/myPortfolio";
+import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 import Experience from "./components/myExperience/myExperience";
-import { useEffect } from 'react';
-import './App.css'; 
 import sunIcon from './images/sun.png';
 import moonIcon from './images/moon.png';
-import TestPage from "./components/readMore/mobilise";
+import TestPage from "./components/myExperience/readMore/storysearch";
+import TestPage1 from "./components/myExperience/readMore1/mobilise";
+import TestPage2 from "./components/myExperience/readMore2/rednose";
+import TestPage3 from "./components/myExperience/readMore3/hydrosync";
+import './App.css'; 
 
 function App() {
-  const [sections, setSections] = useState([]);
   const [isLightMode, setIsLightMode] = useState(true); // State to track current mode
-
-  // Define sections data
-  const sectionsData = [
-    { id: 'about', title: 'About', content: <About sections={sections} /> },
-    { id: 'experience', title: 'Experience', content: <Experience /> },
-    { id: 'portfolio', title: 'Projects', content: <Projects /> },
-
-  ];
-  
-
-  // Update sections state
-  useEffect(() => {
-    setSections(sectionsData);
-  }, []);
 
   // Function to toggle dark/light mode
   const toggleMode = () => {
@@ -35,30 +20,30 @@ function App() {
   return (
     <Router>
       <div className={`App ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
-       <nav className={`horizontal-nav ${isLightMode ? 'light-mode-nav' : 'dark-mode-nav'}`}>
-       <ul>
-  {sections.map(section => (
-    <li key={section.id}>
-      <Link to={`#${section.id}`}>{section.title}</Link>
-    </li>
-  ))}
+        <nav className={`horizontal-nav ${isLightMode ? 'light-mode-nav' : 'dark-mode-nav'}`}>
+          <ul>
 
-  <li>
-    <Link to="#test-page">Test Page</Link>
-  </li>
-  <li>
-    <button className={`mode-toggle-button ${isLightMode ? 'light-mode-button' : 'dark-mode-button'}`} onClick={toggleMode}>
-      <img src={isLightMode ? sunIcon : moonIcon} alt={isLightMode ? 'Light Mode' : 'Dark Mode'} style={{ width: '24px', height: '24px' }} />
-    </button>
-  </li>
-</ul>
+            <li>
+            <Link to="/experience" className="custom-link">About</Link>
+            </li>
+
+            <li>
+              <button className={`mode-toggle-button ${isLightMode ? 'light-mode-button' : 'dark-mode-button'}`} onClick={toggleMode}>
+                <img src={isLightMode ? sunIcon : moonIcon} alt={isLightMode ? 'Light Mode' : 'Dark Mode'} style={{ width: '24px', height: '24px' }} />
+              </button>
+            </li>
+          </ul>
         </nav>
         <main className="content">
-          {sections.map(section => (
-            <section key={section.id} id={section.id}>
-              {section.content}
-            </section>
-          ))}
+          <Routes>
+
+            <Route path="/experience" element={<Experience />} />
+
+            <Route path="/read-storysearch" element={<TestPage />} />
+            <Route path="/read-mobilise" element={<TestPage1 />} />
+            <Route path="/read-rednose" element={<TestPage2 />} />
+            <Route path="/read-hydrosync" element={<TestPage3 />} />
+          </Routes>
         </main>
       </div>
     </Router>

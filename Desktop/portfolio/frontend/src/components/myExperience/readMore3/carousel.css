@@ -1,0 +1,58 @@
+
+
+  
+  .carousel-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+  }
+  
+  .carousel-button.prev {
+    left: 80px; /* Adjust left position as needed */
+  }
+  
+  .carousel-button.next {
+    right: 80px; /* Adjust right position as needed */
+  }
+  
+  .carousel-image10 {
+    
+    width: 250px;
+    bottom: 460px;
+    left: 160px;
+    height: 500px;
+    border-radius: 40px;
+    
+    margin-top: 0px ;
+    display: block;
+    position: relative;
+    transition: box-shadow 0.5s ease; /* Transition for box shadow */
+    animation: slideInRight 1s ease forwards; /* Animation for entering */
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); /* Initial shadow */
+  transition: box-shadow 0.5s ease; /* Transition for box shadow */
+  animation: slideInRight 1s ease forwards; /* Animation for entering */
+  }
+
+
+
+
+  @keyframes glowAnimation {
+    0% {
+      box-shadow: 0 0 10px #000000;
+    }
+    50% {
+      box-shadow: 0 0 20px #000000;
+    }
+    100% {
+      box-shadow: 0 0 10px #000000;
+    }
+  }
