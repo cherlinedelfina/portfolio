@@ -8,13 +8,6 @@
   --light-text-color: #5AE7B4; /* Light mode text color */
 }
 
-.combined-container1 {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to bottom, var(--background-color) 70%, var(--secondary-color) 100%);
-}
-
 
 
 .light-mode {
@@ -67,17 +60,22 @@
   }
 }
 
-
-
 .container100 {
   display: flex;
-  height: 840px;
+  height: 80vh;
   width: 100%;
   background: linear-gradient(to bottom, var(--background-color) 70%, var(--secondary-color) 100%);
 }
 
+.dark-mode .container100 {
+  background: #fff; /* Light color for dark mode */
+}
 
-.left-column {
+.light-mode .container100 {
+  background: linear-gradient(to bottom, var(--background-color) 70%, var(--secondary-color) 100%);
+}
+
+.left-column1 {
   animation: slideInLeft 1s ease forwards;
   flex: 1;
   display: flex;
@@ -88,7 +86,7 @@
   
 }
 
-.right-column {
+.right-column1 {
   animation: slideInRight 1s ease forwards;
   flex: 1;
   display: flex;
@@ -99,24 +97,35 @@
   
 }
 
-
-
-
-.image-container100 {
+.image-container2 {
   position: relative;
   width: 640px;
-  height: 1070px;
+  height: 900px;
   left:20px;
-  background-color: transparent;
-  
-  
+  display: flex;
+  overflow: hidden;
 
 }
 
+.link-container {
+  position: fixed;
+  top: 460px;
+  left: 140px;
+  font-size: 13px;
+  z-index: 9999;
+}
+
+.link {
+  color: #E1E1E1;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
 
 
-
-.image.with-shadow {
+.image1.with-shadow {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Updated shadow */
 }
 
@@ -125,48 +134,81 @@
   margin-top: 20px; /* Adjust as needed */
 }
 
-.greeting {
+.greeting1 {
   text-align: left;
+}
+
+.large1-text1 {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: #5AE7B4;
+  margin: 0px;
+
 }
 
 .small-text100 {
   font-family: 'Abhaya Libre', sans-serif;
-  font-size: 19px;
-  color: #5AE7B4;
-  margin-top: 0px;
-  margin-bottom: 50px;
+  font-size: 18px;
+  margin-top: 7px;
+  margin-bottom: 30px;
 
 }
 
-.small-text300 {
-  font-family: 'Abhaya Libre', sans-serif;
-  font-size:19px;
 
-  z-index: 1;
-  color: #AFAFAF;
-  padding-bottom: 210px;
-
-}
-
-.large-text100 {
-  font-family: 'Amiko', sans-serif;
-  font-size: 50px;
-  font-weight: bold;
-  color: #5AE7B4;
-  margin-bottom: 15px;
-  padding-top: 70px;
-  
-}
 
 .small-text200 {
   font-family: 'Abhaya Libre', sans-serif;
   font-size: 19px;
   color: #AFAFAF;
-  
-
 }
 
-.shapes-image1 {
+.dark-mode .small-text200 {
+  color: #353535;
+}
+
+.light-mode .small-text200 {
+  color: #AFAFAF;
+}
+
+.dark-mode .small-text300 {
+  color: #353535;
+}
+
+.light-mode .small-text300 {
+  color: #AFAFAF;
+}
+
+.dark-mode .large-text100 {
+  color: #16ae76;
+}
+
+.light-mode .large-text100 {
+  color: #5AE7B4;
+}
+
+
+.light-mode .image1.with-shadow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Updated shadow */
+}
+
+.dark-mode .image1.with-shadow {
+  box-shadow: 0 0 20px rgba(7, 7, 7, 0.5); /* Updated shadow */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.shapes-image2 {
   position: relative;
   width: 500px;
   height: 700px;
@@ -194,21 +236,10 @@
   }
 }
 
-.dark-mode .small-text100{
-  color: #16ae76;
-}
-
-.light-mode .small-text100 {
-  color: #5AE7B4;
-}
-
-
-.image100 {
+.image1 {
   position: relative;
   width: 380px;
   bottom: 435px;
-  
-  
 
   left: 120px;
   height: 300px;
@@ -217,42 +248,6 @@
   transition: box-shadow 0.5s ease; /* Transition for box shadow */
   animation: slideInRight 1s ease forwards; /* Animation for entering */
 }
-
-/* rednose.css */
-.button-container {
-margin-top: 20px; /* Adjust margin as needed */
-margin-bottom: 500px;
-}
-
-.button-container button {
-
-background-color: #d1d1d1; /* Blue color, adjust as needed */
-color: white;
-
-border: none;
-border-radius: 5px;
-cursor: pointer;
-}
-
-.button-container button:hover {
-background-color: #d1d1d1; /* Darker shade of blue on hover, adjust as needed */
-}
-
-
-.switch-button {
-  position: fixed;
-  top: 650px; /* Adjust top positioning as needed */
-right: 225px; /* Adjust right positioning as needed */
-  background-color: #d1d1d1; /* Change to desired button color */
-  color: black;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  z-index: 1;
-  margin-bottom: 100px; /* Add margin-top for spacing */
-}
-
-
 
 
 
@@ -328,23 +323,18 @@ right: 225px; /* Adjust right positioning as needed */
   }
 }
 
-.image-grid {
+.image-grid1 {
   z-index: -10;
   background: linear-gradient(to bottom, var(--secondary-color) 70%, var(--secondary-color) 100%);
   display: flex;
   justify-content: space-between;
   padding-left:65px;
   padding-right:500px;
+  
 
 }
 
-.image-item {
-  width: 350px;
-  height: 300px;
-  margin-left: 60px;
 
-  z-index: 1;
-}
 
 
 .image-item img {
@@ -353,6 +343,8 @@ right: 225px; /* Adjust right positioning as needed */
   height: 180px;
   display: block;  
   border-radius: 25px;
+  
+  
 }
 
 .image-item::before {
@@ -360,12 +352,52 @@ right: 225px; /* Adjust right positioning as needed */
   position: absolute;
 
   transform: translate(-50%, -50%);
-  margin-top: 120px;
+  margin-top: 110px;
   margin-left:125px;
 
   width: 280px;
-  height: 280px;
+  height: 260px;
   background-color: #8e8e8e;
   z-index: -1; /* Place the square behind the image */
   border-radius: 25px;
+  
 }
+
+.image-item {
+  width: 350px;
+  height: 300px;
+  margin-left: 60px;
+  opacity: 0; 
+  animation: fadeIn 1.5s ease-in-out forwards;
+  z-index: 1;
+  
+  
+}
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 */
+  }
+}
+
+/* Apply delay to each image item */
+.image-item:nth-child(1) {
+  animation-delay: 0.2s; /* Delay for the first image */
+}
+
+.image-item:nth-child(2) {
+  animation-delay: 0.4s; /* Delay for the second image */
+}
+
+.image-item:nth-child(3) {
+  animation-delay: 0.6s; /* Delay for the third image */
+}
+
+.image-item:nth-child(4) {
+  animation-delay: 0.8s; /* Delay for the fourth image */
+}
+

@@ -97,15 +97,27 @@
   
 }
 
-.image-container2 {
+
+.image-container1 {
   position: relative;
   width: 640px;
   height: 900px;
   left:20px;
-  display: flex;
-  overflow: hidden;
 
 }
+
+.image-container100 {
+  position: relative;
+  width: 640px;
+  height: 1070px;
+  left:20px;
+  background-color: transparent;
+  
+  
+
+}
+
+
 
 .link-container {
   position: fixed;

@@ -24,7 +24,7 @@ function App() {
           <ul>
 
             <li>
-            <Link to="/experience" className="custom-link">About</Link>
+            <Link to="/" className="custom-link">About</Link>
             </li>
 
             <li>
@@ -37,7 +37,7 @@ function App() {
         <main className="content">
           <Routes>
 
-            <Route path="/experience" element={<Experience />} />
+            <Route path="/" element={<Experience />} />
 
             <Route path="/read-storysearch" element={<TestPage />} />
             <Route path="/read-mobilise" element={<TestPage1 />} />
