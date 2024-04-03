@@ -34,22 +34,28 @@
     position: relative;
     perspective: 1000px;
     transform-style: preserve-3d;
-    width: 362px;
-    height: 420px;
-    margin: 0 auto;
+    width: 45vh; /* Adjust width as a percentage of the parent container */
+    height: 55vh; /* Let the height adjust dynamically based on the content */
+    align-items: center;  
+    margin: auto; /* Center the slider horizontally */
+    left:12%;
   }
+
+
   
+
+
   .slide {
-    width: 362px;
-    height: 420px;
-    transition: transform 500ms ease 0s, opacity 500ms ease 0s,
-      visibility 500ms ease 0s;
+    width: 25vw; /* Adjust width as a percentage of its container */
+    height: 57vh; /* Let the height adjust dynamically based on content */
+    transition: transform 500ms ease 0s;
     position: absolute;
     top: 0;
+    transform: translateX(-50%);
     border-radius: 12px;
     align-items: center;
   }
-
+  
   .slide img {
     border-radius: 12px; /* Rounded corners for the image */
     
@@ -57,6 +63,7 @@
 
   .read-more-link {
     text-decoration: underline; /* Remove underline by default */
+    font-size: 1.1vw;
   }
   
 
@@ -64,8 +71,8 @@
   .light-mode .reflection {
     position: absolute;
     width: 100%;
-    height: 60px;
-    bottom: -60px;
+    height: 14%;
+    bottom: -14%;
     border-radius: 12px;
     transition: transform 500ms ease 0s, opacity 500ms ease 0s,
       visibility 500ms ease 0s;
@@ -79,18 +86,14 @@
 
   }
   
-  .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
+
+  
   
   .sliderContent {
     display: flex;
     flex-direction: column;
     color: white;
-    padding: 30px;
+    padding: 5%;
     align-items: flex-start;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -99,18 +102,19 @@
   .date-range {
     margin-left: auto;
     margin-right: 18px;
-   
-    font-size:18px;
+    font-size:1.3vw;
 
   }
   
   
   .sliderContent h2 {
-    margin: 16px 0;
+    margin: 5% 0;
+    font-size: 2vw;
   }
   .sliderContent p {
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 5%;
+    font-size: 1.2vw;
   }
   
   /* normal css  */
@@ -132,25 +136,17 @@
     height: 100vh;
   }
   
-  .btns {
-    padding-top: 100px;
-  }
-  
-  .btns .btn {
-    cursor: pointer;
-  }
-  
-  .btns .btn:last-child {
-    margin-left: 40px;
-  }
+
   
   .myExperience-container {
     position: relative;
     z-index: 0;
     height: 100%;
-    padding-bottom: 180px;
-    padding-top: 1px;
+    width: 100%;
+    padding-bottom: 20vh;
+    padding-top: 1vh;
   }
+
 
   .dark-mode .myExperience-container {
     background: #eaeaea; /* Light color for dark mode */
@@ -161,25 +157,30 @@
   }
   
   
+  /*.slider-container {opacity: 0;transition: opacity 1s ease; }*/
   .slider-container {
-    opacity: 0;
-    transition: opacity 1s ease; /* Apply transition for opacity */
+    width: 80%; /* Adjust as needed */
+    height: 70vh; /* Adjust as needed */
   }
+  
+  
 
 
   .slider-container.fade-in {
     opacity: 1;
   }
+
+
  
   .large-text1 {
     font-family: 'Amiko', sans-serif;
-    font-size: 70px;
+    font-size: 6vw; /* Adjust font size relative to viewport width */
     font-weight: bold;
-    margin-bottom: 120px 0;
+    margin-bottom: 12vh; /* Adjust margin relative to viewport height */
+    margin-top: 0; /* Remove top margin */
     text-align: center;
-    padding-top: 0px;
   }
-
+  
   /* Dark Mode */
   .dark-mode .large-text1 {
     color: #353535; /* Light color for dark mode */
